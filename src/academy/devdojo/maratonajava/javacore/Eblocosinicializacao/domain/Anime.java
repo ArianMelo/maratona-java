@@ -9,7 +9,7 @@ public class Anime {
     // 4 - Construtor é executado
     {
         // Isso é um bloco de inicialização.
-        System.out.println("Dentro do bloco de inicialização");
+        System.out.println("Inicializando Bloco");
         episodios = new int[100];
         for (int i = 0; i < episodios.length; i++) {
             episodios[i] = i+1;
