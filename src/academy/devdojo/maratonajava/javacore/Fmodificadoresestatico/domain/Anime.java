@@ -8,28 +8,29 @@ public class Anime {
     // 2 - Cada atributo de classe é criado e inicializado com valores default ou o que for passado.
     // 3 - Bloco de inicialização é executado
     // 4 - Construtor é executado
+
+    // BLOCO ESTÁTICO > BLOCO PADRÃO NA HIERARQUIA
+    // BLOCO ESTÁTICO SÃO EXECUTADO PRIMEIRO. EXECUTADO DE ACORDO COM AS CHAMADAS.
+    // BLOCO PADRÃO SÃO EXECUTADOS QUANTAS VEZES O CONSTRUTOR FOR CHAMADO.
     static {
         // Isso é um bloco de inicialização.
-        System.out.println("Dentro do bloco de inicialização estatico 1#");
-        episodios = new int[100];
+        System.out.println("BLOCO ESTÁTICO 1-E\n");
+        episodios = new int[10];
         for (int i = 0; i < episodios.length; i++) {
             episodios[i] = i+1;
         }
     }
 
     {
-        System.out.println("Dentro do bloco de inicialização não estatico 1#");
-        System.out.println("Os blocos não estático são executados depois");
+        System.out.println("BLOCO NÃO ESTÁTICO 1-NE");
     }
 
     static {
-        System.out.println("Dentro do bloco de inicialização estatico 2#");
+        System.out.println("BLOCO ESTÁTICO 2-E\n");
     }
 
     {
-        System.out.println("Dentro do bloco de inicialização não estatico 2#");
-        System.out.println("Os blocos não estático são executados depois.");
-        System.out.println("E são executados de acordo com o número de chamadas.");
+        System.out.println("BLOCO NÃO ESTÁTICO 2-NE");
     }
 
     public Anime(String nome){
